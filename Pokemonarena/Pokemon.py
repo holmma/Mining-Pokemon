@@ -10,4 +10,4 @@ class Pokemon:
         self.specialAttack = specialAttack
         self.specialDefense = specialDefense
         self.speed = speed
-        self.score
+        self.score = None
