@@ -11,3 +11,7 @@ class Pokemon:
         self.specialDefense = specialDefense
         self.speed = speed
         self.score = None
+
+    def to_String(self):
+        return 'name = {}, hp = {}, attack = {}, defense = {},specialAttack = {}, specialDefense = {}, speed = {}, score = {}'.format(self.name, self.hp, self.attack,
+                                                                                                                                      self.defense, self.specialAttack, self.specialDefense, self.speed, self.score)
