@@ -2,7 +2,7 @@
 class Pokemon:
 
     # Konstruktor
-    def __init__(self, name, hp, attack, defense, specialAttack, specialDefense, speed):
+    def __init__(self, name, hp, attack, defense, specialAttack, specialDefense, speed, score=None):
         self.name = name
         self.hp = hp
         self.attack = attack
@@ -10,7 +10,7 @@ class Pokemon:
         self.specialAttack = specialAttack
         self.specialDefense = specialDefense
         self.speed = speed
-        self.score = None
+        self.score = score
 
     def to_String(self):
         return 'name = {}, hp = {}, attack = {}, defense = {},specialAttack = {}, specialDefense = {}, speed = {}, score = {}'.format(self.name, self.hp, self.attack,

@@ -11,7 +11,7 @@ class Pokemon_Factory:
                                     == number][self.columns].to_dict('records')[0]
         return Pokemon(**poke_dict)
 
-    def create_Pokemon_Samples(self, nr_of_pokemons):
+    def create_Pokemon_Sample(self, nr_of_pokemons):
         pokemon_sammples = self.pokemon_df.sample(nr_of_pokemons)['Id']
         pokemons = []
         for d, i in enumerate(pokemon_sammples):
