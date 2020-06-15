@@ -2,7 +2,7 @@
 class Pokemon:
 
     # Konstruktor
-    def __init__(self, name, hp, attack, defense, specialAttack, specialDefense, speed, score=None):
+    def __init__(self, name, hp, attack, defense, specialAttack, specialDefense, speed, score=0):
         self.name = name
         self.hp = hp
         self.attack = attack
@@ -19,3 +19,6 @@ class Pokemon:
     def to_String(self):
         return 'name = {}, hp = {}, attack = {}, defense = {},specialAttack = {}, specialDefense = {}, speed = {}, score = {}'.format(self.name, self.hp, self.attack,
                                                                                                                                       self.defense, self.specialAttack, self.specialDefense, self.speed, self.score)
+
+    def to_df_dict(self):
+        return {'name': [self.name], 'hp': [self.hp], 'attack': [self.attack], 'defense': [self.defense], 'specialAttack': [self.specialAttack], 'specialDefense': [self.specialDefense], 'speed': [self.speed]}

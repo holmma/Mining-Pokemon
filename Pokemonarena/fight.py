@@ -61,3 +61,21 @@ class Fight:
             #return str(s)+'\nPokemon 2 Restliche HP:{}'.format(int(self.hp2)) + "\n"+self.Pokemon2.to_String()
             self.Pokemon2.add_win()
             return s
+
+    def fight_ml(self):
+        i = 1
+        while(self.hp1 > 0 and self.hp2 > 0):
+            if(i == 1):
+                self.attack1()
+            else:
+                self.attack2()
+            i = i+1
+            if(i == 3):
+                i = 1
+
+        if(self.hp2 <= 0):
+            return {'name1': [self.Pokemon1.name], 'hp1': [self.Pokemon1.hp], 'attack1': [self.Pokemon1.attack], 'defense1': [self.Pokemon1.defense], 'specialAttack1': [self.Pokemon1.specialAttack], 'specialDefense1': [self.Pokemon1.specialDefense], 'speed1': [self.Pokemon1.speed],
+                    'name2': [self.Pokemon2.name], 'hp2': [self.Pokemon2.hp], 'attack2': [self.Pokemon2.attack], 'defense2': [self.Pokemon2.defense], 'specialAttack2': [self.Pokemon2.specialAttack], 'specialDefense2': [self.Pokemon2.specialDefense], 'speed2': [self.Pokemon2.speed], 'Gewonnen': True}
+        if(self.hp1 <= 0):
+            return {'name1': [self.Pokemon1.name], 'hp1': [self.Pokemon1.hp], 'attack1': [self.Pokemon1.attack], 'defense1': [self.Pokemon1.defense], 'specialAttack1': [self.Pokemon1.specialAttack], 'specialDefense1': [self.Pokemon1.specialDefense], 'speed1': [self.Pokemon1.speed],
+                    'name2': [self.Pokemon2.name], 'hp2': [self.Pokemon2.hp], 'attack2': [self.Pokemon2.attack], 'defense2': [self.Pokemon2.defense], 'specialAttack2': [self.Pokemon2.specialAttack], 'specialDefense2': [self.Pokemon2.specialDefense], 'speed2': [self.Pokemon2.speed], 'Gewonnen': False}
