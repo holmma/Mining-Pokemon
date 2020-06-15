@@ -51,6 +51,7 @@ class Fight:
             else:
                 s = False
             #return str(s)+'\nPokemon 1 Restliche HP:{}'.format(int(self.hp1)) + "\n"+self.Pokemon1.to_String()
+            self.Pokemon1.add_win()
             return s
         if(self.hp1 <= 0):
             if(self.Pokemon1.score < self.Pokemon2.score):
@@ -58,4 +59,5 @@ class Fight:
             else:
                 s = False
             #return str(s)+'\nPokemon 2 Restliche HP:{}'.format(int(self.hp2)) + "\n"+self.Pokemon2.to_String()
+            self.Pokemon2.add_win()
             return s
