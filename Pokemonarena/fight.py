@@ -1,7 +1,9 @@
 from random import *
 
-
+# 
 class Fight:
+
+    # Constructor
     def __init__(self, Pokemon1, Pokemon2):
         self.Pokemon1 = Pokemon1
         self.Pokemon2 = Pokemon2
@@ -18,6 +20,7 @@ class Fight:
         else:
             self.start = 2
 
+    # 
     def attack1(self):
         if(self.Pokemon1.attack > self.Pokemon1.specialAttack):
             self.hp2 = self.hp2-(50 * self.Pokemon1.attack/(
@@ -26,6 +29,7 @@ class Fight:
             self.hp2 = self.hp2-(50 * self.Pokemon1.specialAttack/(
                 50 * self.Pokemon2.specialDefense))
 
+    # 
     def attack2(self):
         if(self.Pokemon2.attack > self.Pokemon2.specialAttack):
             self.hp1 = self.hp1-(50 * self.Pokemon2.attack/(
@@ -34,6 +38,7 @@ class Fight:
             self.hp1 = self.hp1-(50 * self.Pokemon2.specialAttack/(
                 50 * self.Pokemon1.specialDefense))
 
+    # 
     def fight(self):
         i = 1
         while(self.hp1 > 0 and self.hp2 > 0):
@@ -62,6 +67,7 @@ class Fight:
             self.Pokemon2.add_win()
             return s
 
+    # 
     def fight_ml(self):
         i = 1
         while(self.hp1 > 0 and self.hp2 > 0):
@@ -74,8 +80,6 @@ class Fight:
                 i = 1
 
         if(self.hp2 <= 0):
-            return {'name1': [self.Pokemon1.name], 'hp1': [self.Pokemon1.hp], 'attack1': [self.Pokemon1.attack], 'defense1': [self.Pokemon1.defense], 'specialAttack1': [self.Pokemon1.specialAttack], 'specialDefense1': [self.Pokemon1.specialDefense], 'speed1': [self.Pokemon1.speed],
-                    'name2': [self.Pokemon2.name], 'hp2': [self.Pokemon2.hp], 'attack2': [self.Pokemon2.attack], 'defense2': [self.Pokemon2.defense], 'specialAttack2': [self.Pokemon2.specialAttack], 'specialDefense2': [self.Pokemon2.specialDefense], 'speed2': [self.Pokemon2.speed], 'Gewonnen': True}
+            return {'name1': [self.Pokemon1.name], 'hp1': [self.Pokemon1.hp], 'attack1': [self.Pokemon1.attack], 'defense1': [self.Pokemon1.defense], 'specialAttack1': [self.Pokemon1.specialAttack], 'specialDefense1': [self.Pokemon1.specialDefense], 'speed1': [self.Pokemon1.speed], 'name2': [self.Pokemon2.name], 'hp2': [self.Pokemon2.hp], 'attack2': [self.Pokemon2.attack], 'defense2': [self.Pokemon2.defense], 'specialAttack2': [self.Pokemon2.specialAttack], 'specialDefense2': [self.Pokemon2.specialDefense], 'speed2': [self.Pokemon2.speed], 'Gewonnen': True}
         if(self.hp1 <= 0):
-            return {'name1': [self.Pokemon1.name], 'hp1': [self.Pokemon1.hp], 'attack1': [self.Pokemon1.attack], 'defense1': [self.Pokemon1.defense], 'specialAttack1': [self.Pokemon1.specialAttack], 'specialDefense1': [self.Pokemon1.specialDefense], 'speed1': [self.Pokemon1.speed],
-                    'name2': [self.Pokemon2.name], 'hp2': [self.Pokemon2.hp], 'attack2': [self.Pokemon2.attack], 'defense2': [self.Pokemon2.defense], 'specialAttack2': [self.Pokemon2.specialAttack], 'specialDefense2': [self.Pokemon2.specialDefense], 'speed2': [self.Pokemon2.speed], 'Gewonnen': False}
+            return {'name1': [self.Pokemon1.name], 'hp1': [self.Pokemon1.hp], 'attack1': [self.Pokemon1.attack], 'defense1': [self.Pokemon1.defense], 'specialAttack1': [self.Pokemon1.specialAttack], 'specialDefense1': [self.Pokemon1.specialDefense], 'speed1': [self.Pokemon1.speed], 'name2': [self.Pokemon2.name], 'hp2': [self.Pokemon2.hp], 'attack2': [self.Pokemon2.attack], 'defense2': [self.Pokemon2.defense], 'specialAttack2': [self.Pokemon2.specialAttack], 'specialDefense2': [self.Pokemon2.specialDefense], 'speed2': [self.Pokemon2.speed], 'Gewonnen': False}
