@@ -12,6 +12,7 @@ class Pokemon:
         self.speed = speed
         self.score = score
         self.wins = 0
+        self.averageScore = 0
 
     def add_win(self):
         self.wins = self.wins+1
