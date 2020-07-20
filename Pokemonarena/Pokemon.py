@@ -13,11 +13,6 @@ class Pokemon:
         self.score = score
         self.wins = 0
         self.averageScore = 0
-<<<<<<< HEAD
-
-
-=======
->>>>>>> dbb5abb99fee71193df9331d381ad7580c16bb38
 
     def add_win(self):
         self.wins = self.wins+1
